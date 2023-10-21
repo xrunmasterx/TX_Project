@@ -6,6 +6,8 @@
 #include "GameFramework/Character.h"
 #include "C_Character.generated.h"
 
+class USpringArmComponent;
+class UCameraComponent;
 UCLASS()
 class TX_PROJECT_API AC_Character : public ACharacter
 {
@@ -17,6 +19,8 @@ public:
 
 protected:
 	// Called when the game starts or when spawned
+	UCameraComponent* CameraComp;
+	USpringArmComponent* SpringArmComp;
 	virtual void BeginPlay() override;
 
 public:	
